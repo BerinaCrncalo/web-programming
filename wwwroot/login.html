@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Add your CSS link here -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h2>Login</h2>
+
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="inputUsername">Username:</label>
+            <input type="text" class="form-control" id="inputUsername" name="inputUsername" required>
+        </div>
+
+        <div class="form-group">
+            <label for="inputPassword">Password:</label>
+            <input type="password" class="form-control" id="inputPassword" name="inputPassword" required>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="validateLogin()">Login</button>
+    </form>
+
+    <!-- Add your JavaScript here -->
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("inputUsername").value;
+            var password = document.getElementById("inputPassword").value;
+
+            // Your validation logic goes here
+            // This is just a simple example
+            if (username === "berinacrncalo" && password === "password") {
+                alert("Login successful");
+                // Redirect to another page if needed
+                // window.location.href = "dashboard.html";
+            } else {
+                alert("Login failed. Please check your credentials.");
+            }
+        }
+    </script>
+</body>
+
+</html>
